@@ -53,11 +53,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         //2- Create a request for classification from model
         let request = VNCoreMLRequest(model: model) { (request, error) in
-            guard let request = request.results as? [VNClassificationObservation] else {
+            guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
             //Will show all results
-            print(request)
+            //print(results)
+            
+            // extracting the first element from results array
+            // as accuracy higher to lower
+            if let firstResult = results.first {
+                if firstResult.identifier.contains("hotdog") {
+                    self.navigationItem.title = "Hotdog!"
+                } else {
+                    self.navigationItem.title = "Not HotHog!"
+                }
+            }
         }
         
         //3- Data which we are passing for classification
