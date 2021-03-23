@@ -3,6 +3,7 @@
 ## App Introduction
 <p>Are you interested in using your phone camera and asking it what the object/thing is infront of you?</p>
 <p>This app allows you to click a photo from camera or choose an image from gallery and the app will tell you what's the object inside the image is. Boom! </p>
+<p>More especially you can show a hotdog 🌭 image and get to know either if its or not. </p>
 
 ## How to use?
 <p>Simply clone the project and build and run it !!</p>
